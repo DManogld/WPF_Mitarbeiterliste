@@ -26,26 +26,6 @@ namespace Mitarbeiterliste
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        //private List<Mitarbeiter> lol = new List<Mitarbeiter>()
-        //{
-        //    new Mitarbeiter(){Name="hhuh", Vorname="zbzhb"},
-        //    new Mitarbeiter(){Name="sd", Vorname="lol"}
-        //};
-
-        //public ObservableCollection<Mitarbeiter> Workers
-        //{
-        //    get
-        //    {
-        //        return new ObservableCollection<Mitarbeiter>
-        //        {
-        //            new Mitarbeiter {Vorname = "u", Name = "arbeiter1"},
-        //            new Mitarbeiter {Vorname = "kk", Name = "arbeiter2"}
-        //        };
-        //    }
-        //}
-
-
-
         public ObservableCollection<Mitarbeiter> mitarbeiters;
 
         public MainWindow()
