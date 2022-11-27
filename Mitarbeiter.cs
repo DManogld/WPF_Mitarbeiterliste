@@ -27,8 +27,8 @@ namespace Mitarbeiterliste
             }
         }
 
-        public bool _Chef;
-        public bool Chef
+        public string _Chef;
+        public string Chef
         {
             get { return _Chef; }
             set
@@ -37,8 +37,8 @@ namespace Mitarbeiterliste
             }
         }
 
-        public bool _Geschlecht;
-        public bool Geschlecht
+        public string _Geschlecht;
+        public string Geschlecht
         {
             get { return _Geschlecht; }
             set

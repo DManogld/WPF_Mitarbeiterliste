@@ -55,7 +55,8 @@
 
             <ListBox x:Name="MitarbeiterListe"
                      VerticalAlignment="Stretch"
-                     Margin="3,3,3,3">
+                     Margin="3,3,3,3"
+                     ItemsSource="{Binding mitarbeiters}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock>
@@ -92,7 +93,8 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     VerticalAlignment="Center"
-                    Width="100" />
+                    Width="100"
+                    Click="button_delete_Click" />
         </StackPanel>
 
 
@@ -159,7 +161,8 @@
                           Content="Chef"
                           HorizontalAlignment="Left"
                           VerticalAlignment="Center"
-                          Margin="30,20,0,0" />
+                          Margin="30,20,0,0"
+                          />
                 <CheckBox x:Name="CheckBoxAngestelter"
                           Content="Angestelter"
                           HorizontalAlignment="Left"

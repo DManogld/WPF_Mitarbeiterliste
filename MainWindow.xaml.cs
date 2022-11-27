@@ -31,9 +31,9 @@ namespace Mitarbeiterliste
         public MainWindow()
         {
             InitializeComponent();
-            //mitarbeiters = new ObservableCollection<Mitarbeiter>();
+            mitarbeiters = new ObservableCollection<Mitarbeiter>();
 
-            DataContext = this; // Databinding in WPF
+            DataContext = mitarbeiters; // Databinding in WPF
 
             Binding binding = new(); // Init binding
 
@@ -47,11 +47,24 @@ namespace Mitarbeiterliste
 
         public void button_new_Click(object sender, RoutedEventArgs e)
         {
+
             //NewMitarbeiter nm = new NewMitarbeiter();
-            mitarbeiters.Add(new Mitarbeiter() { Name = TextBoxName.Text, Vorname = TextBoxVorname.Text });
+            //if(CheckBoxChef.IsChecked == true && RatioButtonM.IsChecked == true)
+            mitarbeiters.Add(new Mitarbeiter() { Name = TextBoxName.Text, Vorname = TextBoxVorname.Text, Chef = CheckBoxChef.Content.ToString(), Geschlecht = RatioButtonM.Content.ToString() });
+            //else if(CheckBoxAngestelter.IsChecked == true && RatioButtonM.IsChecked == true)
+            //    mitarbeiters.Add(new Mitarbeiter() { Name = TextBoxName.Text, Vorname = TextBoxVorname.Text, Chef = CheckBoxAngestelter.Content.ToString(), Geschlecht = RatioButtonM.Content.ToString() });
+            //else if (CheckBoxChef.IsChecked == true && RatioButtonW.IsChecked == true)
+            //    mitarbeiters.Add(new Mitarbeiter() { Name = TextBoxName.Text, Vorname = TextBoxVorname.Text, Chef = CheckBoxChef.Content.ToString(), Geschlecht = RatioButtonW.Content.ToString() });
+            //else if (CheckBoxAngestelter.IsChecked == true && RatioButtonW.IsChecked == true)
+            //    mitarbeiters.Add(new Mitarbeiter() { Name = TextBoxName.Text, Vorname = TextBoxVorname.Text, Chef = CheckBoxAngestelter.Content.ToString(), Geschlecht = RatioButtonW.Content.ToString() });
             TextBoxName.Text = String.Empty;
             TextBoxVorname.Text = String.Empty;
             //nm.Show();
+        }
+
+        private void button_delete_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
